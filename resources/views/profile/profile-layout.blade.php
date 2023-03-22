@@ -11,8 +11,12 @@
                     href="{{route('change_password')}}">Change Password</a></li>
 
             @if (Auth::user()->role=='admin')
-			<li class="list-group-item {{(request()->route()->getName()=='change_password')?'active':''}}">
-			<a href="{{ route('userManagement') }}">User Control</a></li>
+            <li class="list-group-item {{(request()->route()->getName()=='userManagement')?'active':''}}">
+                <a href="{{ route('userManagement') }}">User Control</a>
+            </li>
+            <li class="list-group-item {{(request()->route()->getName()=='activity')?'active':''}}">
+                <a href="{{ route('activity') }}">User Activity</a>
+            </li>
             @endif
         </ul>
     </div>

@@ -10,14 +10,15 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-12 col-md-6 order-md-1 order-last">
-                    <h3>View Detail</h3>
+                    <h3>User Activity Log</h3>
                 </div>
             </div>
         </div>
-
         <section class="section">
             <div class="card">
-
+                <div class="card-header">
+                    Log Datatable
+                </div>
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
                         <thead>
@@ -26,19 +27,25 @@
                                 <th>Full Name</th>
                                 <th>Email Address</th>
                                 <th>Phone Number</th>
-                                <th>Department</th>
+                                <th>Status</th>
                                 <th>Role Name</th>
+                                <th>Modify</th>
+                                <th>Date Time</th>
+                                <th>department</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($data as $key => $item)
+                            @foreach ($activityLog as $key => $item)
                             <tr>
-                                <td class="id">{{ ++$key }}</td>
-                                <td class="name">{{ $item->name }}</td>
-                                <td class="email">{{ $item->email }}</td>
-                                <td class="phone_number">{{ $item->phone_number }}</td>
-                                <td class="phone_number">{{ $item->department }}</td>
-                                <td class="phone_number">{{ $item->role }}</td>
+                                <td>{{ ++$key }}</td>
+                                <td>{{ $item->name }}</td>
+                                <td>{{ $item->email }}</td>
+                                <td>{{ $item->phone_number }}</td>
+                                <td>{{ $item->gender }}</td>
+                                <td>{{ $item->role }}</td>
+                                <td>{{ $item->modify_user }}</td>
+                                <td>{{ $item->date_time }}</td>
+                                <td>{{ $item->department }}</td>
                             </tr>
                             @endforeach
                         </tbody>
