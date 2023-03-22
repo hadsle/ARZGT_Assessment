@@ -54,7 +54,7 @@ class UserManagementController extends Controller
     // This method displays a form for adding a new user.
     public function addNewUser()
     {
-        return view('profile.addNew');
+        return view('profile.add_new_user');
     }
 
     // This method handles the form submission for adding a new user.
